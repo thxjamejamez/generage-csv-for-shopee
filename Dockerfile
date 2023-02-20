@@ -33,7 +33,7 @@ RUN sh -c "wget http://getcomposer.org/composer.phar && chmod a+x composer.phar 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN cd /app && \
-    npm install
+    npm install && npm run production
 RUN cd /app && \
     /usr/local/bin/composer install --no-dev --ignore-platform-req=ext-gd --ignore-platform-req=ext-zip
 
